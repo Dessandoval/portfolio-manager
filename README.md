@@ -1,6 +1,6 @@
 Did the deposit work for both accounts? Why or why not?
 
-- it failed due to the 100 is a int instead of a BigDecimal
+- account2 failed fails: it has no deposit() because Valuable doesn't list one, also failed due to the 100 is a int instead of a BigDecimal
 
 What methods are available for account1?
 
