@@ -10,7 +10,8 @@ public class CreditCard extends Account {
     }
 
     public void charge(BigDecimal amount) {
-        // TODO: a charge adds to what you owe
+        BigDecimal updatedBalance = getBalance().add(amount);
+        setBalance(updatedBalance);
     }
 
     public void pay(BigDecimal amount) {
