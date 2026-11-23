@@ -15,7 +15,8 @@ public class CreditCard extends Account {
     }
 
     public void pay(BigDecimal amount) {
-        // TODO: a payment takes away from what you owe
+        BigDecimal updatedBalance = getBalance().subtract(amount);
+        setBalance(updatedBalance);
     }
 
     // TODO: override getValue(). Money you owe is worth less than nothing,
