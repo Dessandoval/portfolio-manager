@@ -8,16 +8,16 @@ public class Portfolio implements Valuable {
 
     private String name;
     private String owner;
-    private List<Valuable> valuables = new ArrayList<>();
+    private List<Valuable> assets;
 
     public Portfolio(String name, String owner) {
         this.name = name;
         this.owner = owner;
+        this.assets = new ArrayList<>();
     }
 
     public void add(Valuable valuable) {
-        if (valuable != null) {
-            valuables.add(valuable);
+        assets.add(valuable);
         }
     }
 
