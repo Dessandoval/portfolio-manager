@@ -17,25 +17,26 @@ public class Portfolio implements Valuable {
     }
 
     public void add(Valuable valuable) {
-        assets.add(valuable);
+        if (valuable != null) {
+            assets.add(valuable);
         }
     }
 
     @Override
     public BigDecimal getValue() {
         BigDecimal total = BigDecimal.ZERO;
-        for (Valuable item : valuables) {
+        for (Valuable item : assets) {
             total = total.add(item.getValue());
         }
         return total;
     }
 
     public Valuable getMostValuable() {
-        if (valuables.isEmpty()) {
+        if (assets.isEmpty()) {
             return null;
         }
-        Valuable bestSoFar = valuables.get(0);
-        for (Valuable item : valuables) {
+        Valuable bestSoFar = assets.get(0);
+        for (Valuable item : assets) {
             if (item.getValue().compareTo(bestSoFar.getValue()) > 0) {
                 bestSoFar = item;
             }
@@ -44,11 +45,11 @@ public class Portfolio implements Valuable {
     }
 
     public Valuable getLeastValuable() {
-        if (valuables.isEmpty()) {
+        if (assets.isEmpty()) {
             return null;
         }
-        Valuable leastSoFar = valuables.get(0);
-        for (Valuable item : valuables) {
+        Valuable leastSoFar = assets.get(0);
+        for (Valuable item : assets) {
             if (item.getValue().compareTo(leastSoFar.getValue()) < 0) {
                 leastSoFar = item;
             }
@@ -64,7 +65,7 @@ public class Portfolio implements Valuable {
         return owner;
     }
 
-    public List<Valuable> getValuables() {
-        return valuables;
+    public List<Valuable> getAssets() {
+        return assets;
     }
 }
