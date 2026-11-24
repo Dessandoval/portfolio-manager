@@ -7,23 +7,33 @@ import java.math.BigDecimal;
 public class FinanceApplication {
 
     public static void main(String[] args) {
+
+        Portfolio portfolio = new Portfolio("Portfolio", "destiny");
         House house = new House("Ranch house", new BigDecimal("325000.00"), 1998, 1850, 3);
         Gold gold = new Gold("Gold coins", new BigDecimal("12000.00"), 5.0);
         Jewelry ring = new Jewelry("Grandma's ring", new BigDecimal("2500.00"), 14.0);
+        BankAccount account1 = new BankAccount(123, "Pam", new BigDecimal("12500"));
+        Valuable account2 = new BankAccount(456, "Gary", new BigDecimal("1500"));
+        CreditCard card = new CreditCard(789, "Visa", new BigDecimal("1800.00"));
+
+        portfolio.add(house);
+        portfolio.add(gold);
+        portfolio.add(ring);
+        portfolio.add(account1);
+        portfolio.add(account2);
+        portfolio.add(card);
+
+        account1.deposit(new BigDecimal("100"));
+//        account2.deposit(new BigDecimal("100"));
 
         System.out.println(house.getName() + ": $" + house.getValue());
         System.out.println(gold.getName() + ": $" + gold.getValue());
         System.out.println(ring.getName() + ": $" + ring.getValue());
-        Valuable card = new CreditCard("Visa", -1800);
-
-
-        BankAccount account1 = new BankAccount(123, "Pam", new BigDecimal("12500"));
-        Valuable account2 = new BankAccount(456, "Gary", new BigDecimal("1500"));
-
-        account1.deposit(new BigDecimal("100"));
-//        account2.deposit(new BigDecimal("100"));
         System.out.println("Account 1 balance: " + account1.getBalance());
         System.out.println("Account 1 value: " + account1.getValue());
         System.out.println("Account 2 value: " + account2.getValue());
+        System.out.println("Total Value: $" + portfolio.getValue());
+        System.out.println("Most Valuable: $" + portfolio.getMostValuable().getValue());
+        System.out.println("Least Valuable: $" + portfolio.getLeastValuable().getValue());
     }
 }

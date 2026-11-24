@@ -10,7 +10,7 @@ public class Portfolio implements Valuable {
     private String owner;
     private List<Valuable> valuables = new ArrayList<>();;
 
-    public Portfolio(String name, String owner, List<Valuable> valuables) {
+    public Portfolio(String name, String owner) {
         this.name = name;
         this.owner = owner;
     }

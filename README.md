@@ -16,4 +16,4 @@ Why?
 
 ## Screenshot
 
-[![Class diagram]](images/asset-diagram.png)
+![asset-diagram.png](images/asset-diagram.png)
