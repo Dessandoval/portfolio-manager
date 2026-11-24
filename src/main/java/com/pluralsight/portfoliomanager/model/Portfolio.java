@@ -8,7 +8,7 @@ public class Portfolio implements Valuable {
 
     private String name;
     private String owner;
-    private List<Valuable> valuables = new ArrayList<>();;
+    private List<Valuable> valuables = new ArrayList<>();
 
     public Portfolio(String name, String owner) {
         this.name = name;
