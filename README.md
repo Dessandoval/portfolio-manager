@@ -4,7 +4,7 @@
 
 ### What methods are available for account1?
 
-- getBalance(), setBalance(), getValue(), since it's declared on BankAccount and inherited from Account.
+-add deposit() and withdraw(), since it's declared on BankAccount and inherited from Account.
 
 ### What methods are available for account2?
 
