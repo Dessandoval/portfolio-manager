@@ -13,3 +13,7 @@ What methods are available for account2?
 Why?
 
 - account 1 is declared as BankAccount and account2 is declared as Valuable, even though both are BankAccount objects. it uses the variables reference type when it compiles.
+
+## Screenshot
+
+[![Class diagram]](images/asset-diagram.png)
